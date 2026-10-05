@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  khl-consultant:
+    build: .
+    ports:
+      - "8080:8080"
+    environment:
+      - PORT=8080
+      - YANDEX_API_KEY=${YANDEX_API_KEY}
+      - YANDEX_FOLDER_ID=${YANDEX_FOLDER_ID}
+    restart: always
